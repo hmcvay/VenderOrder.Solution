@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using System;
 using VendorOrder.Models;
 
-namespace VendorOrder.Tests 
-{
+namespace VendorOrder.Tests {
   [TestClass] 
   public class OrderTests : IDisposable {
     public void Dispose() {
@@ -72,6 +71,30 @@ namespace VendorOrder.Tests
       List<Order> newList = new List<Order>{};
       List<Order> result = Order.GetAll();
       CollectionAssert.AreEqual(newList, result);
+    }
+
+    [TestMethod]
+
+    public void GetAll_ReturnsAllOrders_OrderList()
+    {
+      string title1 = "title1";
+      string description1 = "description1";
+      int price1 = 5;
+      int date1 = 03042022;
+
+      string title2 = "title2";
+      string description2 = "description2";
+      int price2 = 10;
+      int date2 = 03052022;
+
+      Order newOrder1 = new Order(title1, description1, price1, date1);
+      Order newOrder2 = new Order(title2, description2, price2, date2);
+
+      List<Order> newList = new List<Order>{ newOrder1, newOrder2 };
+
+      List<Order> result = Order.GetAll();
+
+      CollectionAssert.AreEqual (newList, result);
     }
 
   }

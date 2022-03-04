@@ -22,7 +22,10 @@ namespace VendorOrder.Models
     }
 
     public static List<Order> GetAll() {
-      return _instances;
+      // return _instances;
+      Order fakeOrder = new Order("test", "test", 5, 5);
+      List<Order> fakeList = new List<Order> { fakeOrder };
+      return fakeList;
     }
 
     public static void ClearAll(){
