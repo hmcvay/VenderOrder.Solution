@@ -50,7 +50,7 @@ namespace VendorOrder.Tests
       int price = 5;
       Order newOrder = new Order(title, description, price);
       int result = newOrder.Price;
-      Assert.AreEqual(6, result);
+      Assert.AreEqual(price, result);
     }
   }
 }
