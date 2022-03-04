@@ -37,7 +37,7 @@ namespace VendorOrder.Tests
       string description = "description";
       Order newOrder = new Order(title, description);
       string result = newOrder.Description;
-      Assert.AreEqual("good fail", result);
+      Assert.AreEqual(description, result);
     }
   }
 }
