@@ -1,17 +1,28 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting; 
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using VendorOrder.Models; 
 using System.Collections.Generic;
 using System;
-using System.Collections.Generic;
 
-namespace VendorOrder.Models {
+namespace VendorOrder.Tests 
+{
   [TestClass]
-  public class Vendor
+  public class VendorTests
   {
     [TestMethod]
     public void VendorConstructor_CreatesInstancesOfVendor_Vendor()
     {
-      Vendor newVendor = new Vendor();
+      Vendor newVendor = new Vendor("test name");
       Assert.AreEqual(typeof(Vendor), newVendor.GetType());
+    }
+
+    [TestMethod]
+
+    public void GetName_ReturnsVendorName_String()
+    {
+      string vendorName = "Name";
+      Vendor newVendor = new Vendor(vendorName);
+      string result = newVendor.Name;
+      Assert.AreEqual("good fail", result);
     }
   }
 }
