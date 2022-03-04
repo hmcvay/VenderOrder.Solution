@@ -16,7 +16,7 @@ namespace VendorOrder.Tests
     [TestMethod] 
     public void OrderConstructor_CreateInstancesOfOrder_Order() 
     {  
-      Order newOrder = new Order("title", "description", 5);
+      Order newOrder = new Order("title", "description", 5, 03042022);
       Assert.AreEqual(typeof(Order), newOrder.GetType());
     }
 
@@ -25,8 +25,9 @@ namespace VendorOrder.Tests
     {  
       string title = "title";
       string description = "description";
-       int price = 5;
-      Order newOrder = new Order(title, description, price);
+      int price = 5;
+      int date = 03042022;
+      Order newOrder = new Order(title, description, price, date);
       string result = newOrder.Title;
       Assert.AreEqual(title, result);
     }
@@ -36,8 +37,9 @@ namespace VendorOrder.Tests
     {  
       string title = "title";
       string description = "description";
-       int price = 5;
-      Order newOrder = new Order(title, description, price);
+      int price = 5;
+      int date = 03042022;
+      Order newOrder = new Order(title, description, price, date);
       string result = newOrder.Description;
       Assert.AreEqual(description, result);
     }
@@ -48,9 +50,23 @@ namespace VendorOrder.Tests
       string title = "title";
       string description = "description";
       int price = 5;
-      Order newOrder = new Order(title, description, price);
+      int date = 03042022;
+      Order newOrder = new Order(title, description, price, date);
       int result = newOrder.Price;
       Assert.AreEqual(price, result);
     }
+
+    [TestMethod] 
+    public void GetDate_ReturnsDateOfOrder_Int() 
+    {  
+      string title = "title";
+      string description = "description";
+      int price = 5;
+      int date = 03042022;
+      Order newOrder = new Order(title, description, price, date);
+      int result = newOrder.Date;
+      Assert.AreEqual(1, result);
+    }
+
   }
 }
