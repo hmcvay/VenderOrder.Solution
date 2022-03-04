@@ -16,7 +16,7 @@ namespace VendorOrder.Tests
     [TestMethod] 
     public void OrderConstructor_CreateInstancesOfOrder_Order() 
     {  
-      Order newOrder = new Order("title", "description");
+      Order newOrder = new Order("title", "description", 5);
       Assert.AreEqual(typeof(Order), newOrder.GetType());
     }
 
@@ -24,8 +24,9 @@ namespace VendorOrder.Tests
     public void GetTitle_ReturnsTitleOfOrder_String() 
     {  
       string title = "title";
-       string description = "description";
-      Order newOrder = new Order(title, description);
+      string description = "description";
+       int price = 5;
+      Order newOrder = new Order(title, description, price);
       string result = newOrder.Title;
       Assert.AreEqual(title, result);
     }
@@ -35,9 +36,21 @@ namespace VendorOrder.Tests
     {  
       string title = "title";
       string description = "description";
-      Order newOrder = new Order(title, description);
+       int price = 5;
+      Order newOrder = new Order(title, description, price);
       string result = newOrder.Description;
       Assert.AreEqual(description, result);
+    }
+
+    [TestMethod] 
+    public void GetPrice_ReturnsPriceOfOrder_Int() 
+    {  
+      string title = "title";
+      string description = "description";
+      int price = 5;
+      Order newOrder = new Order(title, description, price);
+      int result = newOrder.Price;
+      Assert.AreEqual(6, result);
     }
   }
 }
