@@ -6,9 +6,11 @@ using System;
 namespace VendorOrder.Tests 
 {
   [TestClass]
-  public class VendorTests: IDisposable {
+  public class VendorTests: IDisposable 
+  {
 
-     public void Dispose() {
+     public void Dispose() 
+    {
       Vendor.ClearAll();
     }
     [TestMethod]
@@ -59,6 +61,28 @@ namespace VendorOrder.Tests
       Vendor result = Vendor.Find(2);
       Assert.AreEqual(newVendor2, result);
 
+    }
+
+    [TestMethod]
+    public void AddOrder_AssociatesOrderWithVendor_OrderList()
+    {
+      //Arrange
+      string title1 = "title1";
+      string description1 = "description1";
+      int price1 = 5;
+      int date1 = 03042022;
+      Order newOrder = new Order(title1, description1, price1, date1);
+      List<Order> newList = new List<Order> { newOrder };
+
+      string name = "Vendor1";
+      Vendor newVendor = new Vendor(name);
+      newVendor.AddOrder(newOrder);
+
+      //Act
+      List<Order> result = newVendor.Orders;
+
+      //Assert
+      CollectionAssert.AreEqual(newList, result);
     }
 
   }
