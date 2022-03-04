@@ -23,7 +23,7 @@ Web App for Pierre's Bakery to keep track of their business's vendors and their 
 ## Setup/Installation Requirements
 
 * Cone this repository
-* Install [.NET5 SDK]((https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/sdk-5.0.401-macos-x64-installer)), if you do not already have it installed
+* Install [.NET5 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/sdk-5.0.401-macos-x64-installer), if you do not already have it installed
 * Navigate to the top level of this directory
 * Run `dotnet restore` to restore all dependencies
 * Run `dotnet build`
