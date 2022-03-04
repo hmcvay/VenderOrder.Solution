@@ -22,7 +22,7 @@ namespace VendorOrder.Tests
       string vendorName = "Name";
       Vendor newVendor = new Vendor(vendorName);
       string result = newVendor.Name;
-      Assert.AreEqual("good fail", result);
+      Assert.AreEqual(vendorName, result);
     }
   }
 }
