@@ -6,13 +6,11 @@ using VendorOrder.Models;
 namespace VendorOrder.Tests 
 {
   [TestClass] 
-  public class ItemTests
-  {
-    // : IDisposable
-    // public void Dispose() {
-    //   Item.ClearAll();
-    // }
-
+  public class OrderTests : IDisposable {
+    public void Dispose() {
+      Order.ClearAll();
+    }
+  
     [TestMethod] 
     public void OrderConstructor_CreateInstancesOfOrder_Order() 
     {  
