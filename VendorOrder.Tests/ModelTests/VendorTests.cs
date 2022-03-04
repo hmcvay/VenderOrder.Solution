@@ -57,7 +57,7 @@ namespace VendorOrder.Tests
       Vendor newVendor2 = new Vendor(name02);
 
       Vendor result = Vendor.Find(2);
-      Assert.AreEqual(newVendor1, result);
+      Assert.AreEqual(newVendor2, result);
 
     }
 
