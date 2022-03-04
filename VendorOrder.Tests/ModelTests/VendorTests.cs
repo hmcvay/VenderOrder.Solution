@@ -16,7 +16,6 @@ namespace VendorOrder.Tests
     }
 
     [TestMethod]
-
     public void GetName_ReturnsVendorName_String()
     {
       string vendorName = "Name";
@@ -24,5 +23,14 @@ namespace VendorOrder.Tests
       string result = newVendor.Name;
       Assert.AreEqual(vendorName, result);
     }
+
+    [TestMethod]
+    public void GetAll_ReturnsEmptyVendorList_Vendor()
+    {
+      List<Vendor> newList = new List<Vendor>{};
+      List<Vendor> result = Vendor.GetAll();
+      CollectionAssert.AreEqual(newList, result);
+    }
+
   }
 }
