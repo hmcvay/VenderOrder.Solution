@@ -1,26 +1,17 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using VendorOrder.Models;
+using Microsoft.VisualStudio.TestTools.UnitTesting; 
 using System.Collections.Generic;
 using System;
+using System.Collections.Generic;
 
-namespace VendorOrder.Tests
-{
+namespace VendorOrder.Models {
   [TestClass]
-  public class CategoryTests 
+  public class Vendor
   {
-    //    : IDisposable
-    // public void Dispose()
-    // {
-    //   Category.ClearAll();
-    // }
-
-    // [TestMethod]
-    // public void MethodName_Behavior_Type()
-    // {
-      
-    // }
-
-    
+    [TestMethod]
+    public void VendorConstructor_CreatesInstancesOfVendor_Vendor()
+    {
+      Vendor newVendor = new Vendor();
+      Assert.AreEqual(typeof(Vendor), newVendor.GetType());
+    }
   }
 }
-
