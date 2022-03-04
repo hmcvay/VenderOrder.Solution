@@ -14,9 +14,10 @@ namespace VendorOrder.Tests
     // }
 
     [TestMethod] 
-    public void MethodName_Behavior_Type() 
+    public void OrderConstructor_CreateInstancesOfOrder_Order() 
     {  
-      
+      Order newOrder = new Order();
+      Assert.AreEqual(typeof(Order), newOrder.GetType());
     }
     
   }
