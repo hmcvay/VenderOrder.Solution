@@ -109,7 +109,7 @@ namespace VendorOrder.Tests {
 
       int result = newOrder1.Id;
 
-      Assert.AreEqual(2, result);
+      Assert.AreEqual(1, result);
     }
 
   }
