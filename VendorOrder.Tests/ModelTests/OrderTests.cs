@@ -98,7 +98,6 @@ namespace VendorOrder.Tests {
     }
 
     [TestMethod]
-
     public void GetId_ReturnIdOfAnOrder_Int()
     {
       string title1 = "title1";
@@ -110,6 +109,28 @@ namespace VendorOrder.Tests {
       int result = newOrder1.Id;
 
       Assert.AreEqual(1, result);
+    }
+
+    [TestMethod]
+
+    public void Find_ReturnsCorrectOrderById_Order()
+    {
+            string title1 = "title1";
+      string description1 = "description1";
+      int price1 = 5;
+      int date1 = 03042022;
+
+      string title2 = "title2";
+      string description2 = "description2";
+      int price2 = 10;
+      int date2 = 03052022;
+
+      Order newOrder1 = new Order(title1, description1, price1, date1);
+      Order newOrder2 = new Order(title2, description2, price2, date2);
+
+      Order result = Order.Find(2);
+
+      Assert.AreEqual(newOrder1, result);
     }
 
   }
