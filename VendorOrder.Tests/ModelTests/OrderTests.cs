@@ -97,5 +97,20 @@ namespace VendorOrder.Tests {
       CollectionAssert.AreEqual (newList, result);
     }
 
+    [TestMethod]
+
+    public void GetId_ReturnIdOfAnOrder_Int()
+    {
+      string title1 = "title1";
+      string description1 = "description1";
+      int price1 = 5;
+      int date1 = 03042022;
+      Order newOrder1 = new Order(title1, description1, price1, date1);
+
+      int result = newOrder1.Id;
+
+      Assert.AreEqual(2, result);
+    }
+
   }
 }

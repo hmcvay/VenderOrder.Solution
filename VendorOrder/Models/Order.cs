@@ -10,6 +10,7 @@ namespace VendorOrder.Models
     public int Price { get; set; }
 
     public int Date { get; set; }
+    public int Id { get; }
 
     private static List<Order> _instances = new List<Order>{};
 
@@ -19,6 +20,7 @@ namespace VendorOrder.Models
       Price = price;
       Date = date;
       _instances.Add(this);
+      Id = _instances.Count;
     }
 
     public static List<Order> GetAll() {
