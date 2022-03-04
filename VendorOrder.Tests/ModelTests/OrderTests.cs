@@ -115,7 +115,7 @@ namespace VendorOrder.Tests {
 
     public void Find_ReturnsCorrectOrderById_Order()
     {
-            string title1 = "title1";
+      string title1 = "title1";
       string description1 = "description1";
       int price1 = 5;
       int date1 = 03042022;
@@ -130,7 +130,7 @@ namespace VendorOrder.Tests {
 
       Order result = Order.Find(2);
 
-      Assert.AreEqual(newOrder1, result);
+      Assert.AreEqual(newOrder2, result);
     }
 
   }
