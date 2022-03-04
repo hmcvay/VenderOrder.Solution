@@ -1,39 +1,52 @@
-# _To Do List_
+# Pierre's Bakery Vendor/Order Tracker Web App
 
-#### By _**Jessi Baker, William Jameson & Drew Henderson **_
-#### Edited By _** Jessi Baker & Ryan Ashberry **_ 
-#### Edited By _** Jessi Baker & Hayley McVay **_ 
+#### By Hayley McVay
 
+<br>
 
-#### _To Do List - Epicodus - C# and .NET - Test-Driven Development With C# | Basic Web Applications_
+## Description
+
+Web App for Pierre's Bakery to keep track of their business's vendors and their accompanying orders. 
+
+<br>
 
 ## Technologies Used
 
 * GIT
-* CS
+* C#
+* .NET 5.0
 * MSTest
+* VSCode
 
-## Description
-
-This is a to do list application where a user can add Items with a description. 
+<br>
 
 ## Setup/Installation Requirements
 
-* Go to _https://github.com/jessb-epicodus/to-do-list-c-.git_
-* Cone this repository to your desktop (or other desired location)
-* Navigate to the top level of the directory called _DIRECTORY_
-* Open the index.html file in your browser
-* _This is not yet published._
+* Cone this repository
+* Install [.NET5 SDK]((https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/sdk-5.0.401-macos-x64-installer)), if you do not already have it installed
+* Navigate to the top level of this directory
+* Run `dotnet restore` to restore all dependencies
+* Run `dotnet build`
+* Navigate to "VendorOrder.Tests" directory
+* Run `dotnet test` to ensure all code is passing
+* Navigate to "VendorOrder" directory
+* Run `dotnet run` to launch server in your browser
+
+<br>
 
 ## Known Bugs
 
 * No known issues
 
+<br>
+
 ## License
 
-Copyright (c) _Mar 2022_ _Jessi Baker_
+[ISC](https://opensource.org/licenses/ISC)
+
+<br>
 
 ## Contact
 
-_If you run into any issues or have questions, ideas or concerns or wish to make a contribution to the code see contact information below._
-* Jessi Baker <jessb.epicodus@gmail.com>
+_Copyright (c) 2022 Hayley McVay_
+
