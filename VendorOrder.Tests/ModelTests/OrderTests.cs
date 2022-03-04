@@ -65,7 +65,7 @@ namespace VendorOrder.Tests
       int date = 03042022;
       Order newOrder = new Order(title, description, price, date);
       int result = newOrder.Date;
-      Assert.AreEqual(1, result);
+      Assert.AreEqual(date, result);
     }
 
   }
