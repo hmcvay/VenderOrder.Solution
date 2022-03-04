@@ -16,8 +16,17 @@ namespace VendorOrder.Tests
     [TestMethod] 
     public void OrderConstructor_CreateInstancesOfOrder_Order() 
     {  
-      Order newOrder = new Order();
+      Order newOrder = new Order("title");
       Assert.AreEqual(typeof(Order), newOrder.GetType());
+    }
+
+    [TestMethod] 
+    public void GetTitle_ReturnsTitleOfOrder_String() 
+    {  
+      string title = "title";
+      Order newOrder = new Order(title);
+      string result = newOrder.Title;
+      Assert.AreEqual("good fail", result);
     }
     
   }
