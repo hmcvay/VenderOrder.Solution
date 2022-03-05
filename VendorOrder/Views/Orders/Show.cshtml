@@ -8,11 +8,11 @@
   </head>
   <body>
     <h1>Order Details: </h1>
-
-    <h2>@Model["order"].Description</h2>
-    <h3>Vendor: @Model["vendor"].Name</h3>
-
-    <a href='/vendors/@Model["vendor"].Id/orders/new'>Add another order</a>
-    <a href='/vendors'>View all vendors</a>
+      <h3>Vendor: @Model["vendor"].Name</h3>
+      <h2>@Model["order"].Description</h2>
+      <h2>How much you charged: $@Model["order"].Price</h2>
+      <h2>Date order was fulfilled: @Model["order"].Date</h2>
+    <br>
+    <a href='/vendors'>Back to all vendors</a>
   </body>
 </html>
